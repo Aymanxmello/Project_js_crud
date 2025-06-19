@@ -1,0 +1,138 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #8052ec, #d161ff);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+#taskdyali {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#taskdyali input {
+    flex: 1;
+    height: 50px;
+    padding: 0 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#taskdyali input:focus {
+    border-color: #8052ec;
+    outline: none;
+}
+
+#taskdyali button {
+    background-color: #8052ec;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0 20px;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#taskdyali button:hover {
+    background-color: #6a3be8;
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task {
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s;
+}
+
+.task:hover {
+    background-color: #f1efff;
+}
+
+.taskname {
+    font-size: 15px;
+    color: #333;
+    flex: 1;
+    word-break: break-word;
+}
+
+.completed .taskname {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.actions button {
+    background-color: #8052ec;
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.actions button:hover {
+    background-color: #6a3be8;
+}
+
+.actions button i {
+    pointer-events: none;
+    font-size: 16px;
+}
+
+.task {
+    animation: slideFade 0.3s ease forwards;
+}
+
+@keyframes slideFade {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
