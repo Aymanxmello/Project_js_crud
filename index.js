@@ -1,4 +1,3 @@
-let tasks = [];
 
 document.querySelector('#zid').onclick = function () {
     const input = document.querySelector('#taskdyali input');
